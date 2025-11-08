@@ -1,11 +1,18 @@
 import { Locator, test, expect } from "@playwright/test";
 
-test("Select by visible text", async ({ page }) => {
+test("single select dropdown-all methods", async ({ page }) => {
   await page.goto("https://testautomationpractice.blogspot.com");
-  //select by visible text
-  // await page.locator("#country").selectOption("Japan");
-  //select by value attribute
 
-  //wait to see selection
-  await page.waitForTimeout(5000);
+  //through visible text
+  await page.locator("#country").selectOption("India");
+  await page.waitForTimeout(2000);
+  //throught value attribute
+  await page.locator("#country").selectOption({ value: "uk" });
+  await page.waitForTimeout(2000);
+  //throuogh label
+  await page.locator("#country").selectOption({ label: "India" });
+  await page.waitForTimeout(2000);
+  //through index
+  await page.locator("#country").selectOption({ index: 3 });
+  await page.waitForTimeout(2000);
 });
