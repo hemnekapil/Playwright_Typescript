@@ -1,0 +1,23 @@
+# Node
+node_modules/
+npm-debug.log
+yarn.lock
+pnpm-lock.yaml
+
+# Build
+dist/
+build/
+
+# Playwright
+/test-results/
+.playwright/
+playwright-report/
+
+# VS Code
+.vscode/
+
+# TypeScript
+*.tsbuildinfo
+
+# Env
+.env
